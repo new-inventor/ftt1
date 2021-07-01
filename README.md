@@ -11,7 +11,11 @@ if you build the project you can find the code in dist directory of project. the
 ### Technologies used description
 
 Pug - used because accept division to separate blocks and mixins
+
 scss - used because accept reusability of classes and provide more flexibility to programmer.
+
 webpack - to build all this staff you need a bundler. I use this because i know it and this is fast for me to setup.
+
 postcss - for make style compatible to all browsers and prefix rules.
+
 stylelint - for same purpose
