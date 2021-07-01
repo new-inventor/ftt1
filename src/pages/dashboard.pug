@@ -6,12 +6,12 @@ include ../mixins/charts
 +layout(styles)
     .container
         div.sidebar
-            div.logo Logo
+            div.logo= translation.sections.logo
             nav
-                +iconNavButton('home', true)
-                +iconNavButton('search', false)
-                +iconNavButton('shopping-cart', false)
-                +iconNavButton('user', false)
+                +iconNavButton('home', true, translation.sections.menu.dashboard)
+                +iconNavButton('search', false, translation.sections.menu.search)
+                +iconNavButton('shopping-cart', false, translation.sections.menu.shoppingCart)
+                +iconNavButton('user', false, translation.sections.menu.profile)
         main.dashboard
             div.search-field(style='grid-area: search')
                 +iconButton('search')
@@ -23,15 +23,15 @@ include ../mixins/charts
                 +textBlock(translation.sections.blocks.someSection2)
                     p some text
             +dashboardBlock('followers', 'orange')
-                +indicatorBlock('593k', '143,54%', 'Followers', 'up')
+                +indicatorBlock('593k', '143,54%', translation.sections.blocks.followers, 'up')
             +dashboardBlock('views', 'orange')
-                +indicatorBlock('593k', '14,23%', 'Views', 'down')
+                +indicatorBlock('593k', '14,23%', translation.sections.blocks.views, 'down')
             +dashboardBlock('balance', 'white')
-                +indicatorBlock('$1,3k', '+0.00%', 'Balance')
+                +indicatorBlock('$1,3k', '+0.00%', translation.sections.blocks.balance)
             +dashboardBlock('percents', 'green')
-                +percentageBlock('97%', 'This month')
+                +percentageBlock('97%', translation.sections.blocks.thisMonth)
             +dashboardBlock('level', 'orange')
-                +chartBlockTitled('Level')
+                +chartBlockTitled(translation.sections.blocks.level)
                     +circle(240, 390, 16)
             +dashboardBlock('graph', 'white')
                 +chartBlock()

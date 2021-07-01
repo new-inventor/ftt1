@@ -6,6 +6,8 @@
 3. `yarn start` - to check as live
 4. `yarn build` - to see the markup in static files
 
+if you build the project you can find the code in dist directory of project. then just open in your browser `dashboard.en.html` file. you should see the markup. 
+
 ### Technologies used description
 
 Pug - used because accept division to separate blocks and mixins
