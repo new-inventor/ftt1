@@ -1,0 +1,36 @@
+{
+  "name": "emails",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --mode production --open --config ./webpack.config.js",
+    "build": "webpack --mode production --config ./webpack.config.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.6",
+    "dot-object": "^2.1.4",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "js-yaml": "^4.1.0",
+    "mini-css-extract-plugin": "^1.6.2",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^6.1.0",
+    "postcss-normalize": "^10.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^12.1.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-scss": "^3.19.0",
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

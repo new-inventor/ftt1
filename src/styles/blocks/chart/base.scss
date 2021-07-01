@@ -1,0 +1,42 @@
+@import "../../variables";
+
+.chart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+
+  &--circle {
+    width: 100%;
+    max-width: 120px;
+    margin: 20px auto 0;
+
+    svg {
+      stroke: map-get($colors, orange-light);
+    }
+  }
+
+  &--line {
+    position: relative;
+    width: 8px;
+    background-color: map-get($colors, blue-light);
+    border-radius: 4px;
+
+    &.value {
+      position: absolute;
+      width: 8px;
+      border-radius: 4px;
+
+      &.orange {
+        background-color: map-get($colors, orange);
+      }
+
+      &.green {
+        background-color: map-get($colors, green);
+      }
+    }
+  }
+}

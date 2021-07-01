@@ -1,0 +1,8 @@
+@import "../../variables";
+
+.logo {
+  color: map-get($colors, green);
+  font-size: 1.25rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+}

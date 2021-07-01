@@ -1,0 +1,15 @@
+@mixin color-theme($bgColor, $primaryColor, $secondaryColor, $thirdColor) {
+  background-color: map-get($colors, $bgColor);
+
+  .primary-color {
+    color: map-get($colors, $primaryColor);
+  }
+
+  .secondary-color {
+    color: map-get($colors, $secondaryColor);
+  }
+
+  .third-color {
+    color: map-get($colors, $thirdColor);
+  }
+}

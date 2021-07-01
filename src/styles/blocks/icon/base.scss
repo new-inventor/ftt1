@@ -1,0 +1,7 @@
+@import "../../variables";
+
+@each $iconSize in $iconSizes {
+  i.icon.s-#{$iconSize} {
+    font-size: $iconSize * 1px;
+  }
+}

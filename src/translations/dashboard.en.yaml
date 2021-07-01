@@ -1,0 +1,18 @@
+sections:
+  blocks:
+    followers: 'Followers'
+    views: 'Views'
+    balance: 'Balance'
+    someSection1: 'Section 1'
+    someSection2: 'Section 2'
+    level: 'Level'
+    thisMonth: 'This month'
+  search:
+    placeholder: 'For example, Rating'
+  menu:
+    dashboard: 'Dashboard'
+    search: 'Search'
+    shoppingCart: 'Cart'
+    profile: 'Profile'
+  logo: 'Logo'
+

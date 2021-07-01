@@ -1,0 +1,35 @@
+mixin dashboardBlock(gridArea, theme)
+    section(class=`color-theme--${theme} content-block content-block--${gridArea}`, style=`grid-area: ${gridArea}`)
+        if block
+            block
+
+mixin textBlock(title, text)
+    h4.primary-color= title
+    if block
+      block
+
+mixin indicatorBlock(total, delta, text, icon)
+    h1.total.primary-color= total
+    h4.text.third-color= text
+    h4.delta.secondary-color
+        if icon
+            +icon(`caret-${icon}`, 's', 24)
+        = ' ' + delta
+
+mixin percentageBlock(total, text)
+    h2.primary-color= total
+    h5.secondary-color= text
+
+mixin chartBlock()
+    div.content-block--content
+        div.chart&attributes(attributes)
+            if block
+              block
+
+mixin chartBlockTitled(text)
+    div
+        div.chart&attributes(attributes)
+            if block
+              block
+        h4.third-color= text
+

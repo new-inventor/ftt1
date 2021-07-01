@@ -1,0 +1,71 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+body {
+  background-color: map-get($colors, blue-light);
+}
+
+#{$root-class} {
+  @import "blocks/container/base";
+  @import "blocks/button/base";
+  @import "blocks/nav/base";
+  @import "blocks/sidebar/base";
+  @import "blocks/logo/base";
+  @import "blocks/search-field/base";
+  @import "blocks/dashboard/base";
+  @import "blocks/content-block/base";
+  @import "blocks/chart/base";
+  @import "blocks/icon/base";
+}
+
+@media screen and (min-width: map-get($breakpoints, xs)) and (max-width: map-get($breakpoints, sm)) {
+  #{$root-class} {
+    @import "blocks/logo/xs";
+    @import "blocks/dashboard/xs";
+    @import "blocks/container/xs";
+    @import "blocks/nav/xs";
+    @import "blocks/button/sm";
+    @import "blocks/sidebar/xs";
+    @import "blocks/search-field/xs";
+  }
+}
+
+@media screen and (min-width: map-get($breakpoints, sm) + 1) and (max-width: map-get($breakpoints, md)) {
+  #{$root-class} {
+    @import "blocks/dashboard/sm";
+    @import "blocks/container/sm";
+    @import "blocks/nav/sm";
+    @import "blocks/button/sm";
+    @import "blocks/sidebar/sm";
+  }
+}
+
+@media screen and (min-width: map-get($breakpoints, md) + 1) and (max-width: map-get($breakpoints, lg)) {
+  #{$root-class} {
+    @import "blocks/dashboard/md";
+  }
+}
+
+.color-theme {
+  &--orange {
+    @include color-theme(orange, purple, blue-light, orange-dark);
+  }
+
+  &--green {
+    @include color-theme(green, white, white, blue-light);
+  }
+
+  &--white {
+    @include color-theme(white, purple, purple, blue-light);
+  }
+
+  &--purple-dark {
+    @include color-theme(purple-dark, white, white, blue-light);
+  }
+
+  &--transparent {
+    @include color-theme(transparent, white, white, blue-light);
+  }
+}

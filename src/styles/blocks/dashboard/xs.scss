@@ -1,0 +1,14 @@
+.dashboard {
+  margin: 16px;
+  grid-auto-columns: minmax(100px, 1fr);
+  grid-template-areas:
+    'search'
+    'text1'
+    'text2'
+    'followers'
+    'views'
+    'balance'
+    'percents'
+    'level'
+    'graph';
+}

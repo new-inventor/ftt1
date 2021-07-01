@@ -1,0 +1,22 @@
+.search-field {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+
+  input.search {
+    color: map-get($colors, white);
+    background-color: map-get($colors, purple-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    height: 10px;
+    border: none;
+    border-radius: 15px;
+    padding: 8px;
+    min-width: 230px;
+
+    &::placeholder {
+      color: map-get($colors, white);
+    }
+  }
+}

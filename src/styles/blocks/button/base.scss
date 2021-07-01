@@ -1,0 +1,42 @@
+@import '../../variables';
+@import '../../mixins';
+
+.button {
+  &--nav-icon {
+    cursor: pointer;
+    padding: 0.25rem 0.75rem;
+    color: map-get($colors, white);
+    background-color: map-get($colors, transparent);
+    border: 2px solid map-get($colors, transparent);
+    border-radius: 0.5rem;
+    margin: 24px 0 0;
+
+    &:hover,
+    &:active {
+      border-color: map-get($colors, orange);
+      color: map-get($colors, orange);
+    }
+
+    &.button--active {
+      color: map-get($colors, purple);
+      background-color: map-get($colors, orange);
+      border-color: map-get($colors, orange);
+
+      &:hover {
+        color: map-get($colors, purple);
+      }
+    }
+  }
+
+  &--icon {
+    color: map-get($colors, white);
+    background-color: map-get($colors, transparent);
+    border: none;
+    padding: 8px;
+
+    &:hover,
+    &:active {
+      color: map-get($colors, orange);
+    }
+  }
+}

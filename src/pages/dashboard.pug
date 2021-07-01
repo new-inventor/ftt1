@@ -1,0 +1,52 @@
+include ../mixins/layout
+include ../mixins/buttons
+include ../mixins/content-block
+include ../mixins/charts
+
++layout(styles)
+    .container
+        div.sidebar
+            div.logo Logo
+            nav
+                +iconNavButton('home', true)
+                +iconNavButton('search', false)
+                +iconNavButton('shopping-cart', false)
+                +iconNavButton('user', false)
+        main.dashboard
+            div.search-field(style='grid-area: search')
+                +iconButton('search')
+                input.search(placeholder=translation.sections.search.placeholder)
+            +dashboardBlock('text1', 'white')
+                +textBlock(translation.sections.blocks.someSection1)
+                    p some text
+            +dashboardBlock('text2', 'white')
+                +textBlock(translation.sections.blocks.someSection2)
+                    p some text
+            +dashboardBlock('followers', 'orange')
+                +indicatorBlock('593k', '143,54%', 'Followers', 'up')
+            +dashboardBlock('views', 'orange')
+                +indicatorBlock('593k', '14,23%', 'Views', 'down')
+            +dashboardBlock('balance', 'white')
+                +indicatorBlock('$1,3k', '+0.00%', 'Balance')
+            +dashboardBlock('percents', 'green')
+                +percentageBlock('97%', 'This month')
+            +dashboardBlock('level', 'orange')
+                +chartBlockTitled('Level')
+                    +circle(240, 390, 16)
+            +dashboardBlock('graph', 'white')
+                +chartBlock()
+                    +lineVertical(20, 40, 'orange')
+                    +lineVertical(20, 50, 'orange')
+                    +lineVertical(20, 30, 'orange')
+                    +lineVertical(20, 60, 'green')
+                    +lineVertical(20, 80, 'green')
+                    +lineVertical(20, 55, 'green')
+            div
+                div primary
+                div third
+                div secondary
+            div
+                div primary
+                div third
+                div secondary
+

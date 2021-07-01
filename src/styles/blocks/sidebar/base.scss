@@ -1,0 +1,8 @@
+@import "../../variables";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid map-get($colors, blue-light);
+  padding: 25px 0;
+}

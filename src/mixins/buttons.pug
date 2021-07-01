@@ -1,0 +1,9 @@
+include ./icons
+
+mixin iconNavButton(iconName, active, title)
+    a(class=`button button--nav-icon ${active ? ' button--active' : ''}`)
+        +icon(iconName, 's', 20)
+
+mixin iconButton(iconName, title)
+    button(class=`button button--icon`)
+        +icon(iconName, 's', 20)

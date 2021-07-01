@@ -1,0 +1,18 @@
+mixin layout(styles)
+    doctype html
+    html
+        head
+            meta(content="text/html; charset=utf-8" http-equiv="Content-Type")
+            meta(content="IE=edge" http-equiv="X-UA-Compatible")
+            each stylePath in styles
+                link(rel="stylesheet" type="text/css" href=stylePath)
+            title
+        body.test-task(bgcolor="transparent")
+            if block
+                block
+
+mixin menu
+    nav nav
+
+mixin mainBlock
+    main main block

@@ -1,0 +1,8 @@
+mixin circle(start, end, width)
+    .chart--circle&attributes(attributes)
+        svg(viewBox=`-${width/2} -${width/2} ${200+width} ${200+width}` xmlns="http://www.w3.org/2000/svg" style=`transform: rotate(${-90 + start }deg)`)
+            circle(cx='100' cy='100' r='100' fill="transparent" stroke-width=`${width}px` stroke-linecap="round" stroke-dasharray =`${(((end - start) / 360) * 628)} 628` stroke-dashoffset="0")
+
+mixin lineVertical(start, end, color)
+    .chart--line&attributes(attributes)
+        div(class=`chart--line value ${color}` style=`top:${start}%;height:${end - start}%`)

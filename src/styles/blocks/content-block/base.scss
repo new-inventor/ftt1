@@ -1,0 +1,58 @@
+.content-block {
+  border-radius: 24px;
+  padding: 24px;
+
+  min-height: 95px;
+
+  &--content {
+    height: 100%;
+    width: 100%;
+  }
+
+  &--followers,
+  &--views,
+  &--balance,
+  &--level {
+    text-align: center;
+  }
+
+  &--followers,
+  &--views,
+  &--balance {
+    padding: 38px;
+
+    .total,
+    .delta,
+    .text {
+      text-align: center;
+    }
+
+    .total,
+    .delta {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .total,
+    .text {
+      margin-bottom: 0.25rem;
+    }
+
+    .text {
+      font-size: 0.75rem;
+    }
+
+    .delta {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+        margin: 0 2px 0 0;
+        line-height: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.dashboard {
+  display: grid;
+  grid-auto-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+  grid-template-areas:
+    'search search search search'
+    'text1 text1 text1 percents'
+    'text2 text2 text2 level'
+    'followers views balance graph';
+  gap: 28px;
+  margin: 24px 38px;
+}
